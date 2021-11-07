@@ -6,5 +6,5 @@ console.log("hit");
 router.get("/test", (req, res) => {
   return res.json("api/test");
 });
-router.get("/api/jobs", jobController.getJobs);
+router.get("/jobs", jobController.getJobs);
 module.exports = router;
