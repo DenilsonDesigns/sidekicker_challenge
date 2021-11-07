@@ -14,11 +14,11 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   },
 });
 
-const db: any = {};
+const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.jobs = require("./job.model.ts")(sequelize, Sequelize);
+db.jobs = require("./job.model.js")(sequelize, Sequelize);
 
 module.exports = db;
