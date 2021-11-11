@@ -1,22 +1,26 @@
 module.exports = (sequelize, Sequelize) => {
   const Job = sequelize.define("job", {
     "job title": {
-      // @TODO: limit 100
-      // @TODO: required
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(100),
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
     },
     "job description": {
-      // @TODO: limit 500
-      // @TODO: required
-      type: Sequelize.STRING,
+      type: Sequelize.STRING(500),
+      allowNull: false,
+      validate: {
+        len: [1, 500],
+      },
     },
     date: {
-      // @TODO: required
       type: Sequelize.STRING,
+      allowNull: false,
     },
     applicants: {
-      // @TODO: required
       type: Sequelize.STRING,
+      allowNull: false,
     },
   });
 

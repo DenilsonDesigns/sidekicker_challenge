@@ -3,7 +3,6 @@ const csv = require("csv-parser");
 const dbStore = require("../server/models");
 const Job = dbStore.jobs;
 
-// @TODO: change this to change cmdln arg?
 const inputFile = "./etl/jobs-list.csv";
 
 const results = [];
